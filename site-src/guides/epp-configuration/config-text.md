@@ -221,12 +221,12 @@ Scores pods based on the amount of the prompt is believed to be in the pod's KvC
 
 - *Type*: prefix-cache-scorer
 - *Parameters*:
-  - `blockSize` specified the size of the blocks to break up the input prompt when
-    calculating the block hashes. If not specified defaults to `64`
-  - `maxPrefixBlocksToMatch` specifies the maximum number of prefix blocks to match. If
-   not specified defaults to `256`
-  - `lruCapacityPerServer` specifies the capacity of the LRU indexer in number of entries
-    per server (pod). If not specified defaults to `31250`
+    - `blockSize` specified the size of the blocks to break up the input prompt when
+      calculating the block hashes. If not specified defaults to `64`
+    - `maxPrefixBlocksToMatch` specifies the maximum number of prefix blocks to match. If
+      not specified defaults to `256`
+    - `lruCapacityPerServer` specifies the capacity of the LRU indexer in number of entries
+      per server (pod). If not specified defaults to `31250`
 
 #### LoRAAffinityScorer
 
@@ -258,18 +258,18 @@ Picks the pod with the maximum score from the list of candidates. This is the de
 if not specified.
 
 - *Type*: max-score-picker
-- *Parameters*: 
-  - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates, based on
-    the scores of those endpoints. If not specified defaults to `1`.
+- *Parameters*:
+    - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates, based on
+      the scores of those endpoints. If not specified defaults to `1`.
 
 #### RandomPicker
 
 Picks a random pod from the list of candidates.
 
 - *Type*: random-picker
-- *Parameters*: 
-  - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates. If not
-    specified defaults to `1`.
+- *Parameters*:
+    - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates. If not
+      specified defaults to `1`.
 
 #### WeightedRandomPicker
 
@@ -277,8 +277,8 @@ Picks pod(s) from the list of candidates based on weighted random sampling using
 
 - *Type*: weighted-random-picker
 - *Parameters*:
-  - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates. If not
-    specified defaults to `1`.
+    - `maxNumOfEndpoints`: Maximum number of endpoints to pick from the list of candidates. If not
+      specified defaults to `1`.
 
 ### Flow Control Plugins (Policies)
 
