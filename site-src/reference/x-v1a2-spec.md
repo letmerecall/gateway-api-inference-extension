@@ -26,6 +26,7 @@ Extension specifies how to configure an extension that runs the endpoint picker.
 
 
 _Appears in:_
+
 - [InferencePoolSpec](#inferencepoolspec)
 
 | Field | Description | Default | Validation |
@@ -45,9 +46,11 @@ ExtensionFailureMode defines the options for how the gateway handles the case wh
 responsive.
 
 _Validation:_
+
 - Enum: [FailOpen FailClose]
 
 _Appears in:_
+
 - [Extension](#extension)
 
 | Field | Description |
@@ -77,10 +80,12 @@ Invalid values include:
 * "example.com/bar" - "/" is an invalid character
 
 _Validation:_
+
 - MaxLength: 253
 - Pattern: `^$|^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$`
 
 _Appears in:_
+
 - [Extension](#extension)
 - [ParentGatewayReference](#parentgatewayreference)
 - [PoolObjectReference](#poolobjectreference)
@@ -203,6 +208,7 @@ InferenceObjectives, defined by the Inference Platform Admin.
 
 
 _Appears in:_
+
 - [InferenceObjective](#inferenceobjective)
 
 | Field | Description | Default | Validation |
@@ -220,6 +226,7 @@ InferenceObjectiveStatus defines the observed state of InferenceObjective
 
 
 _Appears in:_
+
 - [InferenceObjective](#inferenceobjective)
 
 | Field | Description | Default | Validation |
@@ -259,6 +266,7 @@ InferencePoolSpec defines the desired state of InferencePool
 
 
 _Appears in:_
+
 - [InferencePool](#inferencepool)
 
 | Field | Description | Default | Validation |
@@ -277,6 +285,7 @@ InferencePoolStatus defines the observed state of InferencePool.
 
 
 _Appears in:_
+
 - [InferencePool](#inferencepool)
 
 | Field | Description | Default | Validation |
@@ -300,11 +309,13 @@ Invalid values include:
 * "invalid/kind" - "/" is an invalid character
 
 _Validation:_
+
 - MaxLength: 63
 - MinLength: 1
 - Pattern: `^[a-zA-Z]([-a-zA-Z0-9]*[a-zA-Z0-9])?$`
 
 _Appears in:_
+
 - [Extension](#extension)
 - [ParentGatewayReference](#parentgatewayreference)
 - [PoolObjectReference](#poolobjectreference)
@@ -335,11 +346,13 @@ Invalid values include:
 * example.com. - can not start or end with "."
 
 _Validation:_
+
 - MaxLength: 253
 - MinLength: 1
 - Pattern: `^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?([A-Za-z0-9][-A-Za-z0-9_.]{0,61})?[A-Za-z0-9]$`
 
 _Appears in:_
+
 - [InferencePoolSpec](#inferencepoolspec)
 
 
@@ -361,11 +374,13 @@ Valid values include:
 * 123-my-value
 
 _Validation:_
+
 - MaxLength: 63
 - MinLength: 0
 - Pattern: `^(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?$`
 
 _Appears in:_
+
 - [InferencePoolSpec](#inferencepoolspec)
 
 
@@ -441,11 +456,13 @@ Invalid values include:
 * "example.com" - "." is an invalid character
 
 _Validation:_
+
 - MaxLength: 63
 - MinLength: 1
 - Pattern: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?$`
 
 _Appears in:_
+
 - [ParentGatewayReference](#parentgatewayreference)
 
 
@@ -459,10 +476,12 @@ Object names can have a variety of forms, including RFC 1123 subdomains,
 RFC 1123 labels, or RFC 1035 labels.
 
 _Validation:_
+
 - MaxLength: 253
 - MinLength: 1
 
 _Appears in:_
+
 - [Extension](#extension)
 - [ParentGatewayReference](#parentgatewayreference)
 - [PoolObjectReference](#poolobjectreference)
@@ -479,6 +498,7 @@ defaulting to Gateway.
 
 
 _Appears in:_
+
 - [PoolStatus](#poolstatus)
 
 | Field | Description | Default | Validation |
@@ -518,6 +538,7 @@ PoolStatus defines the observed state of InferencePool from a Gateway.
 
 
 _Appears in:_
+
 - [InferencePoolStatus](#inferencepoolstatus)
 
 | Field | Description | Default | Validation |
@@ -533,10 +554,12 @@ _Underlying type:_ _integer_
 PortNumber defines a network port.
 
 _Validation:_
+
 - Maximum: 65535
 - Minimum: 1
 
 _Appears in:_
+
 - [Extension](#extension)
 
 
@@ -556,5 +579,3 @@ _Appears in:_
 | --- | --- | --- | --- |
 | `weight` _integer_ | (The following comment is copied from the original targetModel)<br />Weight is used to determine the proportion of traffic that should be<br />sent to this model when multiple target models are specified.<br />Weight defines the proportion of requests forwarded to the specified<br />model. This is computed as weight/(sum of all weights in this<br />TargetModels list). For non-zero values, there may be some epsilon from<br />the exact proportion defined here depending on the precision an<br />implementation supports. Weight is not a percentage and the sum of<br />weights does not need to equal 100.<br />If a weight is set for any targetModel, it must be set for all targetModels.<br />Conversely weights are optional, so long as ALL targetModels do not specify a weight. |  | Maximum: 1e+06 <br />Minimum: 1 <br /> |
 | `modelRewrite` _string_ |  |  |  |
-
-
