@@ -341,7 +341,7 @@ Each entry in the schedulingProfile's plugins section has the following fields:
 
 ## Saturation Detector Configuration
 
-The Saturation Detector is used to determine if the the cluster is overloaded, i.e. saturated. When
+The Saturation Detector is used to determine if the cluster is overloaded, i.e. saturated. When
 the cluster is saturated special actions will be taken depending what has been enabled. At this time, sheddable requests will be dropped.
 
 The Saturation Detector determines that the cluster is saturated by looking at the following metrics provided by the inference servers:
